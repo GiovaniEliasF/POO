@@ -20,7 +20,7 @@ public class App {
                     break;
                 case 2:
                     Caneta1.escrever();
-                    break;
+                break;
                 case 3:
                     Caneta1.tampar();
                     break;
