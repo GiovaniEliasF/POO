@@ -12,7 +12,7 @@ public class Main {
             
             System.out.println("Quantos jogadores irão participar? (Máximo 11)");
             int numJogadores = scanner.nextInt();
-            scanner.nextLine(); // Consumir a quebra de linha
+            scanner.nextLine(); 
             
             for (int i = 0; i < numJogadores; i++) {
                 System.out.printf("Nome do jogador %d: ", i + 1);
