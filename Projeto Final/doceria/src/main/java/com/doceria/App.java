@@ -2,6 +2,7 @@ package com.doceria;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -10,14 +11,13 @@ import java.io.IOException;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("loginView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setTitle("Login Screen");
-        stage.setScene(scene);
+        Parent root = FXMLLoader.load(getClass().getResource("/com/doceria/loginView.fxml"));
+
+        stage.setScene(new Scene(root, 600, 400));
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }

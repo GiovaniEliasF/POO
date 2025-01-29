@@ -1,4 +1,4 @@
-package com.doceria.model;
+package com.doceria.repository;
 
 
 import java.sql.Connection;

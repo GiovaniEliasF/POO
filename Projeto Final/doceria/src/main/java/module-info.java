@@ -10,4 +10,5 @@ module com.doceria.doceria {
     exports com.doceria;
     exports com.doceria.controller;
     opens com.doceria.controller to javafx.fxml;
+    opens com.doceria.model to javafx.base;
 }
