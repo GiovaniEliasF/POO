@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="476.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.doceria.controller.TypesController">
+    <children>
+        <!-- Barra de navegação -->
+        <VBox layoutX="10.0" layoutY="10.0" prefHeight="242.0" prefWidth="150.0" spacing="10.0">
+            <Button onAction="#home" prefHeight="40.0" text="Inicio">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+            <Button disable="true" onAction="#typesView" prefHeight="40.0" text="Tipos">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+            <Button onAction="#ingredientsView" prefHeight="40.0" text="Ingredientes">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+            <Button onAction="#productsView" prefHeight="40.0" text="Produtos">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+            <Button onAction="#loginView" prefHeight="40.0" style="-fx-background-color: #f54242;" text="Logout" textFill="WHITE">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+        </VBox>
+
+        <!-- Conteúdo principal -->
+        <VBox layoutX="170.0" layoutY="10.0" spacing="10.0">
+            <HBox spacing="30.0">
+                <TextField fx:id="nameField" prefHeight="26.0" prefWidth="192.0" promptText="Nome do Tipo" />
+                <Button onAction="#addType" style="-fx-border-color: #11fa00;" text="Adicionar" />
+                <Button onAction="#updateType" text="Atualizar" />
+                <Button onAction="#deleteType" style="-fx-border-color: #f54242;" text="Apagar" />
+            </HBox>
+
+            <TableView fx:id="typeTable" prefHeight="400.0" prefWidth="496.0">
+                <columns>
+                    <TableColumn fx:id="nameColumn" prefWidth="500.0" text="Tipos">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="name" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>

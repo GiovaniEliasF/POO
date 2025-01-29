@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="483.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.doceria.controller.ProductsController">
+    <children>
+        <!-- Barra de navegação -->
+        <VBox layoutX="10.0" layoutY="10.0" prefWidth="150.0" spacing="10.0">
+            <Button onAction="#home" prefHeight="40.0" text="Inicio">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+            <Button onAction="#typesView" prefHeight="40.0" text="Tipos">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+            <Button onAction="#ingredientsView" prefHeight="40.0" text="Ingredientes">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+            <Button disable="true" onAction="#productsView" prefHeight="40.0" text="Produtos">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+            <Button onAction="#loginView" prefHeight="40.0" style="-fx-background-color: #f54242;" text="Logout" textFill="WHITE">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+        </VBox>
+
+        <!-- Conteúdo principal -->
+        <VBox layoutX="170.0" layoutY="10.0" spacing="10.0">
+            <HBox spacing="10.0">
+                <TextField fx:id="nameField" promptText="Nome do Produto" />
+                <TextField fx:id="quantityField" promptText="Quantidade" />
+                <ComboBox fx:id="typeComboBox" promptText="Selecionar Tipo" />
+                <Button onAction="#addProduct" style="-fx-border-color: #11fa00;" text="Adicionar" />
+                <Button onAction="#updateProduct" text="Atualizar" />
+                <Button onAction="#deleteProduct" style="-fx-border-color: #f54242;" text="Apagar" />
+                <Button onAction="#addProductsView" style="-fx-border-color: #1b18cc;" text="Adicionar Ingredientes" />
+            </HBox>
+
+            <TableView fx:id="productTable" prefHeight="400.0" prefWidth="600.0">
+                <columns>
+                    <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Nome">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="name" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="typeColumn" prefWidth="150.0" text="Tipo">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="typeName" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="quantityColumn" prefWidth="100.0" text="Quantidade">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="qtd" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="ingredientsColumn" prefWidth="400.0" text="Ingredientes">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="ingredientsName" />
+                        </cellValueFactory>
+                    </TableColumn>
+
+
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="349.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.doceria.controller.AddProductController">
+    <children>
+        <VBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+            <HBox spacing="10.0">
+                <ComboBox fx:id="ingredientComboBox" promptText="Selecionar Ingredientes" />
+                <Button onAction="#addIngredient" text="Adicionar" />
+                <Button onAction="#removeIngredient" text="Remover" />
+            </HBox>
+
+            <TableView fx:id="ingredientTable" prefHeight="300.0" prefWidth="277.0">
+                <columns>
+                    <TableColumn fx:id="ingredientNameColumn" prefWidth="316.0000246047974" text="Ingredientes">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="name" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+
+            <Button onAction="#conclude" text="Concluir">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+        </VBox>
+    </children>
+</AnchorPane>

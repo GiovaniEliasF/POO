@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="363.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.doceria.controller.MainViewController">
+    <children>
+        <Button alignment="CENTER" layoutX="50.0" layoutY="50.0" onAction="#home" prefHeight="40.0" prefWidth="200.0" text="Inicio">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+        <Button alignment="CENTER" layoutX="50.0" layoutY="100.0" onAction="#typesView" prefHeight="40.0" prefWidth="200.0" text="Tipos">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+        <Button alignment="CENTER" layoutX="50.0" layoutY="150.0" onAction="#ingredientsView" prefHeight="40.0" prefWidth="200.0" text="Ingredientes">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+        <Button alignment="CENTER" layoutX="50.0" layoutY="200.0" onAction="#productsView" prefHeight="40.0" prefWidth="200.0" text="Produtos">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+        <Button alignment="CENTER" layoutX="50.0" layoutY="250.0" onAction="#loginView" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #f54242;" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+    </children>
+</AnchorPane>
