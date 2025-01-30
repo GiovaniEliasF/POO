@@ -11,7 +11,11 @@ Um sistema de gerenciamento para uma Doceria desenvolvido em JavaFX. Este projet
 ## Tecnologias Utilizadas  
 
 - **JavaFX** para a interface gráfica do usuário.  
-- **PostgreSQL** como sistema de gerenciamento de banco de dados.  
+- **PostgreSQL** como sistema de gerenciamento de banco de dados.
+
+##Link Vídeo Explicativo
+
+https://drive.google.com/file/d/1mp8g3w8RnPuFG_m0gJxcyZHE55JjG2Bp/view?usp=sharing
 
 ## Diagramas  
 
